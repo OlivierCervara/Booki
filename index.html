@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booki</title>
     <script src="https://kit.fontawesome.com/e3f88593b6.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/CSS/style.css">
 </head>
 <body>
     <!--On utilise header pour specifier que le morceau se situe en haut de page-->
@@ -44,7 +44,37 @@
     <!--le placeholdeer est un texte dans une input-->
     <input type="text" placeholder="Marseille, France">
     <!--bouton cliquable pour le formulaire-->
-    <button>Rechercher</button>
+    <button>
+        <span class="search-text">Rechercher</span>
+        <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+    </button>
+    </div>
+
+        <!--FILTRES-->
+    <div class="filter-list">
+        <h1>Filtres</h1>
+        <div class="filter">
+            <i class="fa-sharp fa-solid fa-money-bill-wave"></i>
+            <span>Economique</span>
+        </div>
+        <div class="filter">
+            <i class="fa-sharp fa-solid fa-child-reaching"></i>
+            <span>Familiale</span>
+        </div>
+        <div class="filter">
+            <i class="fa-solid fa-heart"></i>
+            <span>Romantique</span>
+        </div>
+        <div class="filter">
+            <i class="fa-solid fa-dog"></i>
+            <span>Animaux autorises</span>
+        </div>
+    </div>
+
+        <!--RESULTATS DE RECHERCHE-->
+    <div class="search-results">
+        <i class="fa-solid fa-info"></i>
+        <p>Plus de 500 logements sont disponibles dans cette ville</p>
     </div>
     </div>
 </body>
