@@ -1,0 +1,78 @@
+           /*BARRE DE NAVIGATION*/
+
+/*display flex permet de modifier la taille comme on veut sans avoir des problemes d'empilements d'elements sans aucune incidence sur la boite*/
+/*align items center permet a ce que tous les elements soient a la meme hauteur*/
+/*On veut les mettre en haut a droite donc on utilise justify content flex end*/
+/*flex wrap wrap permet l'empilement des boites quand les dimensions de la fenetre se reduisent*/
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+/*Pour specifier un id on doit mettre # suivi du nom de l'id*/
+/*On creer une marge a droite du logo et grace a "auto" 
+on veut que cette marge prenne toute la place dispo a droite
+car sinon le logo sera en haut a droite a cause du flex end.*/
+/*Le padding correspond à l'espace entre le contenu de l'élément et sa bordure
+premier chiffre c'est haut bas et le deuxieme c'est gauche droite.*/
+#logo {
+    height: 55px;
+    margin-top: 30px;
+    margin-left: 1rem;
+    margin-right: auto;
+    padding: 0 2rem;
+}
+
+/*Pour pas que hebergement et activite soient colles on leur met un padding pour creer de l'espace*/
+/*Le padding permet de créer un espace supplémentaire à l'intérieur d'un élément. 
+La marge (margin) permet quant à elle de créer un espace supplémentaire à l'extérieur de l'élément.*/
+/*On initialise une bordure du haut qui sera transparente mais bleue dans le hover*/
+nav a {
+    padding: 2em;
+    border-top: 4px solid transparent;
+}
+
+/*Ici grace au :hover nous cherchons a faire en sorte que la bordure du haut soit colorier en bleue 
+lorsque l'utilisateur pointe son curseur sur nos elements de nav.*/
+/*Sans l'attribut solid ma bordure ne s'affichait pas*/
+nav a:hover {
+    color: #0065FC;
+    border-top: 4px solid #0065FC;
+}
+
+/*Pour specifier une class on doit mettre un . suivi du nom de la class*/
+.nav-bar {
+    display:flex ;
+}
+
+/*=> Tous les liens qui sont dans la class subnav. 
+Ici on cherche a centrer nos elements dans les dimensions reduites de la page*/
+/*Ici on veut modifier la dimension de nos liens 
+lorsque la taille max de la page est de 768px.*/
+/*Quand le texte descend je veux que ma div prenne toute la place dispo grace a flex basis 100%*/
+@media (max-width: 768px){
+.nav-bar {
+    flex-basis: 100%;
+    text-align: center;
+    }
+ 
+/*Il faut que dans ces dimensions apparaisse une sub nav grise
+qui devient bleue quand curseur sur un element.*/
+/*Grace au flex basis, dans ces dimensions notre navabr prendra 100% de sons espace
+et nos a prendront a chacun 50%*/
+.nav-bar a {
+    flex-basis: 50%;
+    text-align: center;
+    border-bottom: 4px solid #F2F2F2;
+    }
+
+/*On veut que sur ces dimensions la barre bleue du haut soit tranferer en bas.
+Nous allons donc rajoute une barre en bas et rendre invisible la barre du haut.*/
+.nav-bar a:hover {
+    border-bottom-color: #0065FC;
+    border-top-color: transparent;
+    color: #0065FC;
+}
+}

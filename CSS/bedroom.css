@@ -1,0 +1,33 @@
+/*CARTE DES CHAMBRES*/
+
+.bedroom-card {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    box-shadow: 0 0 16px lightgrey;
+    flex-grow: 1;
+}
+
+.bedroom-card img {
+    border-radius: 1rem 1rem 0 0;
+    height: 10rem;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.bedroom-card p, h4 {
+    margin: 0.2rem;
+}
+
+.popular-description p,h4 {
+    margin: 0.2rem;
+}
+
+.blue {
+    color: #0065FC;
+}
+
+.grey {
+    color: #d9d9d9;
+}
