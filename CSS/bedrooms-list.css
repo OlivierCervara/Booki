@@ -1,4 +1,3 @@
-
 /*LISTE DES CHAMBRES*/
 
 .bedrooms-list {
@@ -12,29 +11,28 @@
     border-radius: 1rem;
 }
             
-            .city {
-                flex-basis: 66%;
-            }
+.city {
+    flex-basis: 66%;
+}
             
-            .bedrooms-list .city a {
-                font-weight: bold;
-            }
+.bedrooms-list .city a {
+    font-weight: bold;
+}
+                      
+.popular {
+    flex-basis: 33%;
+}
             
-            
-            .popular {
-                flex-basis: 33%;
-            }
-            
-            @media (max-width : 768px) {
-                .bedrooms-list {
-                    flex-direction: column;
-                }
-                .popular {
-                    order: -1;
-                }
-            }
-
-            /*LISTE BEDROOMS CITY*/
+/*@media (max-width : 768px) {
+    .bedrooms-list {
+        flex-direction: column;
+        }
+    .popular {
+        order: -1;
+        }
+}
+*/
+/*LISTE BEDROOMS CITY*/
 
 .city-bedrooms-list {
     display: flex;

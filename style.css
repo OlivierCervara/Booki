@@ -1,8 +1,4 @@
 /* Les import se mettent toujours tout en haut du fichier css*/
-/* * est le selecteur universel */
-/*On ajoute la police sans serif si jamais l'utilisateur ne peut pas voir raleway*/
-/*Box sizing border box signifie que peut importe toutes les modifs de padding margin etc 
-la box de mon element gardera sa taille initiale*/
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
 @import url(./CSS/navbar.css);
@@ -14,5 +10,6 @@ la box de mon element gardera sa taille initiale*/
 @import url(./CSS/popular.css);
 @import url(./CSS/bedroom.css);
 @import url(./CSS/popular-card.css);
-
+@import url(./CSS/activities.css);
+@import url(./CSS/footer.css);
 

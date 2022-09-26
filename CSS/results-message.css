@@ -1,18 +1,17 @@
-
-            /*RESULTATS DE RECHERCHE*/
-            .search-results {
-                display: flex;
-                align-items: center;
-                gap: 1rem;
-            }
+/*RESULTATS DE RECHERCHE*/
+.search-results {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
             
-            .search-results i {
-                color: #0065FC;
-                width: 2rem;
-                height: 2rem;
-                border: 1px solid #deebff;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
+.search-results i {
+    color: #0065FC;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #deebff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

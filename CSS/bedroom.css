@@ -6,6 +6,14 @@
     padding: 0.5rem;
     box-shadow: 0 0 16px lightgrey;
     flex-grow: 1;
+    transition: all 0.2s;
+    flex-basis: 30%;
+}
+
+.bedroom-card:hover {
+    transform: scale(1.02);
+    box-shadow: 3px 5px 11px --5px lightgrey;
+    cursor: pointer;
 }
 
 .bedroom-card img {
@@ -16,13 +24,12 @@
     object-position: top;
 }
 
-.bedroom-card p, h4 {
+.bedroom-card p,
+.bedroom-card h3,
+.popular-description p,
+.popular-description h3 {
     margin: 0.2rem;
-}
-
-.popular-description p,h4 {
-    margin: 0.2rem;
-}
+} 
 
 .blue {
     color: #0065FC;
@@ -30,4 +37,8 @@
 
 .grey {
     color: #d9d9d9;
+}
+
+.black {
+    color: black;
 }

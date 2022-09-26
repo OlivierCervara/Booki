@@ -1,3 +1,8 @@
+/* * est le selecteur universel */
+/*On ajoute la police sans serif si jamais l'utilisateur ne peut pas voir raleway*/
+/*Box sizing border box signifie que peut importe toutes les modifs de padding margin etc 
+la box de mon element gardera sa taille initiale*/
+
 * {
     box-sizing: border-box;
     font-family: "Raleway", "sans-serif";
