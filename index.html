@@ -1,64 +1,47 @@
 <!DOCTYPE html>
 <html lang="fr">
-
     <head>
-        <!--meta permet de definir des metadonnees = données qui ne vont pas être affiché sur la page mais qui vont pouvoir servir aux différents robots pour comprendre et afficher la page-->
-        <!--l'attribut charset pour l'encodage = jeu de caracteres-->
-        <!--viewport : la valeur passée à content va nous permettre d’indiquer comment le navigateur doit afficher la page sur différents appareils-->
-        <!--on link le fichier css qui contiendra tout le css-->
-        <!--Pour utiliser les icons de font awesome il faut rajouter un script-->
-        <meta charset="UTF-8">
+        <meta charset="UTF-8">  <!--meta permet de definir des metadonnees = données qui ne vont pas être affiché sur la page mais qui vont pouvoir servir aux différents robots pour comprendre et afficher la page--> <!--l'attribut charset pour l'encodage = jeu de caracteres-->
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--viewport : la valeur passée à content va nous permettre d’indiquer comment le navigateur doit afficher la page sur différents appareils-->
         <title>Booki</title>
-        <script src="https://kit.fontawesome.com/e3f88593b6.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/e3f88593b6.js" crossorigin="anonymous"></script> <!--Pour utiliser les icons de font awesome il faut rajouter un script-->
+        <link rel="stylesheet" href="style.css"> <!--on link le fichier css qui contiendra tout le css-->
     </head>
 
     <body>
-        <!--On utilise header pour specifier que le morceau se situe en haut de page-->
-        <!--BARRE DE NAVIGATION-->
-        <header>
-        <!--Quand on a plusieurs liens qui se mettent les uns a la suite de autres c'est une navbar-->
-            <nav>
-                <!--l'attribut alt sert a decrire la photo pour les malvoyants-->
-                <!--L'attribut id va nous permettre de specifier dans le css les infos qu'on veut appliquer seulement au logo-->
-                <img id="logo" src="/Images/Booki.png" alt="Booki logo">
-                <!--a href="lien">desciption. les liens s'affichent les uns a la suite des autres car c'est en display line alors qu'une div est en display block-->
-                <!--On rajoute une div a l'interieur du nav car on veut que lorsque la fenetre change de taille nos elements soient lies-->
-                <div class="nav-bar">
-                <a href="">Hébergements</a>
-                <a href="">Activités</a>
+        <!--NAVBAR-->
+        <header> <!--On utilise header pour specifier que le morceau se situe en haut de page-->
+            <nav class="nav-bar"> <!--Quand on a plusieurs liens qui se mettent les uns a la suite de autres c'est une navbar-->
+                <img id="logo" src="/images/logo/Booki@3x.png" alt="Logo Booki"/> <!--l'attribut alt sert a decrire la photo pour les malvoyants--> <!--L'attribut id va nous permettre de specifier dans le css les infos qu'on veut appliquer seulement au logo-->      
+                <div class="nav-bar"> <!--On rajoute une div a l'interieur du nav car on veut que lorsque la fenetre change de taille nos elements soient lies-->
+                    <a href="">Hébergements</a> <!--a href="lien">desciption. les liens s'affichent les uns a la suite des autres car c'est en display line alors qu'une div est en display block-->
+                    <a href="">Activités</a>
                 </div>
             </nav>
         </header>
 
-        <main>
-            <!--BARRE DE RECHERCHE-->
-            
-            <h1>Trouvez votre hebergement pour des vacances de reve</h1>
+        <main class="wrapper">
+            <!--SEARCH BAR-->
+            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
             <p>En plein centre ville ou en pleine nature</p>
-
-            <!--BOITE DE TEXTE-->
+            
+            <!--TEXT-BOX-->
             <div class="text-box">
-                <!--i représente un morceau de texte qui se différencie du texte principal-->
-                <i class="fa-sharp fa-solid fa-location-dot"></i>
-                <!--input formulaire web qui permet à l'utilisateur de saisir des données-->
-                <!--le placeholdeer est un texte dans une input-->
-                <input type="text" placeholder="Marseille, France">
-                <!--bouton cliquable pour le formulaire-->
-                <button>
+                <i class="fa-sharp fa-solid fa-location-dot"></i> <!--i représente un morceau de texte qui se différencie du texte principal-->
+                <input type="text" placeholder="Marseille, France"> <!--input formulaire web qui permet à l'utilisateur de saisir des données.le placeholdeer est un texte dans une input-->
+                <button> <!--bouton cliquable pour le formulaire-->
                 <span class="search-text">Rechercher</span>
                 <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
                 </button>
             </div>
 
-            <!--FILTRES-->
+            <!--FILTERS-->
             <div class="filter-list">
                 <h2>Filtres</h2>
                 <div class="filter">
                     <i class="fa-sharp fa-solid fa-money-bill-wave"></i>
-                    <span>Economique</span>
+                    <span>Économique</span>
                 </div>
                 <div class="filter">
                     <i class="fa-sharp fa-solid fa-child-reaching"></i>
@@ -70,28 +53,25 @@
                 </div>
                 <div class="filter">
                     <i class="fa-solid fa-dog"></i>
-                    <span>Animaux autorises</span>
+                    <span>Animaux autorisés</span>
                 </div>
             </div>
 
-            <!--RESULTATS DE RECHERCHE-->
+            <!--SEARCH-RESULTS-->
             <div class="search-results">
                 <i class="fa-solid fa-info"></i>
                 <p>Plus de 500 logements sont disponibles dans cette ville</p>
             </div>
-               
-            
-            
-            <!--LISTE DES CHAMBRES-->
-            <div class="bedrooms-list">
-        
+
+            <!--BEDROOMS-LIST-->
+            <section class="bedrooms-list">
                 <div class="city">
-                    <h3>Hebergements a Marseille</h3>
+                    <h3>Hébergements à Marseille</h3>
                     <div class="city-bedrooms-list">
-                        <div class="bedroom-card">
-                            <img src="/Images/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Canebiere">
-                            <h4>Auberge de la Cannebiere</h4>
-                            <p>Nuit a partir de <strong>25euros</strong></p>
+                        <div class="bedrooms-card">
+                            <img src="/images/hebergements/auberge-de-la-cannebiere.jpg" alt="Auberge de la Canebière">
+                            <h4>Auberge de la Canebière</h4>
+                            <p>Nuit à partir de <strong>25€</strong></p>
                             <p class="stars">
                                 <i class="fa-solid fa-star blue"></i>
                                 <i class="fa-solid fa-star blue"></i>
@@ -100,10 +80,22 @@
                                 <i class="fa-solid fa-star grey"></i>
                             </p>
                         </div>
-                        <div class="bedroom-card">
-                            <img src="/Images/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Canebiere">
-                            <h4>Auberge de la Cannebiere</h4>
-                            <p>Nuit a partir de <strong>25euros</strong></p>
+                        <div class="bedrooms-card">
+                            <img src="/images/hebergements/hotel-du-port.jpg" alt="Auberge de la Canebière">
+                            <h4>Hotel du port</h4>
+                            <p>Nuit à partir de <strong>52€</strong></p>
+                            <p class="stars">
+                                <i class="fa-solid fa-star blue"></i>
+                                <i class="fa-solid fa-star blue"></i>
+                                <i class="fa-solid fa-star blue"></i>
+                                <i class="fa-solid fa-star blue"></i>
+                                <i class="fa-solid fa-star blue"></i>
+                            </p>
+                        </div>
+                        <div class="bedrooms-card">
+                            <img src="/images/hebergements/hotel-les-mouettes.jpg" alt="Auberge de la Canebière">
+                            <h4>Hotel Les mouettes</h4>
+                            <p>Nuit à partir de <strong>76€</strong></p>
                             <p class="stars">
                                 <i class="fa-solid fa-star blue"></i>
                                 <i class="fa-solid fa-star blue"></i>
@@ -112,10 +104,22 @@
                                 <i class="fa-solid fa-star grey"></i>
                             </p>
                         </div>
-                        <div class="bedroom-card">
-                            <img src="/Images/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Canebiere">
-                            <h4>Auberge de la Cannebiere</h4>
-                            <p>Nuit a partir de <strong>25euros</strong></p>
+                        <div class="bedrooms-card">
+                            <img src="/images/hebergements/hotel-de-la-mer.jpg" alt="Auberge de la Canebière">
+                            <h4>Hotel de la mer</h4>
+                            <p>Nuit à partir de <strong>46€</strong></p>
+                            <p class="stars">
+                                <i class="fa-solid fa-star blue"></i>
+                                <i class="fa-solid fa-star blue"></i>
+                                <i class="fa-solid fa-star blue"></i>
+                                <i class="fa-solid fa-star grey"></i>
+                                <i class="fa-solid fa-star grey"></i>
+                            </p>
+                        </div>
+                        <div class="bedrooms-card">
+                            <img src="/images/hebergements/auberge-le-panier.jpg" alt="Auberge de la Canebière">
+                            <h4>Auberge Le Panier</h4>
+                            <p>Nuit à partir de <strong>23€</strong></p>
                             <p class="stars">
                                 <i class="fa-solid fa-star blue"></i>
                                 <i class="fa-solid fa-star blue"></i>
@@ -124,59 +128,45 @@
                                 <i class="fa-solid fa-star grey"></i>
                             </p>
                         </div>
-                        <div class="bedroom-card">
-                            <img src="/Images/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Canebiere">
-                            <h4>Auberge de la Cannebiere</h4>
-                            <p>Nuit a partir de <strong>25euros</strong></p>
+                        <div class="bedrooms-card">
+                            <img src="/images/hebergements/hotel-chez-amina.jpg" alt="Auberge de la Canebière">
+                            <h4>Hotel chez Amina</h4>
+                            <p>Nuit à partir de <strong>96€</strong></p>
                             <p class="stars">
                                 <i class="fa-solid fa-star blue"></i>
                                 <i class="fa-solid fa-star blue"></i>
                                 <i class="fa-solid fa-star blue"></i>
                                 <i class="fa-solid fa-star blue"></i>
-                                <i class="fa-solid fa-star grey"></i>
+                                <i class="fa-solid fa-star blue"></i>
                             </p>
                         </div>
-                        <div class="bedroom-card">
-                            <img src="/Images/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Canebiere">
-                            <h4>Auberge de la Cannebiere</h4>
-                            <p>Nuit a partir de <strong>25euros</strong></p>
-                            <p class="stars">
-                                <i class="fa-solid fa-star blue"></i>
-                                <i class="fa-solid fa-star blue"></i>
-                                <i class="fa-solid fa-star blue"></i>
-                                <i class="fa-solid fa-star blue"></i>
-                                <i class="fa-solid fa-star grey"></i>
-                            </p>
-                        </div>
-                        <div class="bedroom-card">
-                            <img src="/Images/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Canebiere">
-                            <h4>Auberge de la Cannebiere</h4>
-                            <p>Nuit a partir de <strong>25euros</strong></p>
-                            <p class="stars">
-                                <i class="fa-solid fa-star blue"></i>
-                                <i class="fa-solid fa-star blue"></i>
-                                <i class="fa-solid fa-star blue"></i>
-                                <i class="fa-solid fa-star blue"></i>
-                                <i class="fa-solid fa-star grey"></i>
-                            </p>
-                        </div>
-                    
                     </div>
                     <a href="">Afficher plus</a>
                 </div>
-                
-
-                
                 <div class="popular">
                     <h3>Les plus populaires
-                    <i class="fa-solid fa-star black"></i>
+                        <i class="fa-solid fa-star black"></i>
                     </h3>
                     <div class="popular-flex">
-                        <div class="bedroom-card popular-card">
-                            <img src="/Images/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Canebiere">
+                        <div class="bedrooms-card popular-card">
+                            <img src="/images/populaires/hotel-le-soleil-du-matin.jpg" alt="Auberge de la Canebière">
                             <div class="popular-description">
                                 <h4>Hotel le soleil du matin</h4>
-                                <p>Nuit a partir de <strong>128euros</strong></p>
+                                <p>Nuit à partir de <strong>128€</strong></p>
+                                <p class="stars">
+                                    <i class="fa-solid fa-star blue"></i>
+                                    <i class="fa-solid fa-star blue"></i>
+                                    <i class="fa-solid fa-star blue"></i>
+                                    <i class="fa-solid fa-star blue"></i>
+                                    <i class="fa-solid fa-star blue"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bedrooms-card popular-card">
+                            <img src="/images/populaires/au-coeur-de-l'eau-chambres-d'hotes.jpg" alt="Auberge de la Canebière">
+                            <div class="popular-description">
+                                <h4>Au coeur de l'eau Chambres d'hotes</h4>
+                                <p>Nuit à partir de <strong>71€</strong></p>
                                 <p class="stars">
                                     <i class="fa-solid fa-star blue"></i>
                                     <i class="fa-solid fa-star blue"></i>
@@ -186,25 +176,11 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="bedroom-card popular-card">
-                            <img src="/Images/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Canebiere">
+                        <div class="bedrooms-card popular-card">
+                            <img src="/images/populaires/hotel-tout-bleu-et-blanc.jpg" alt="Auberge de la Canebière">
                             <div class="popular-description">
-                                <h4>Hotel le soleil du matin</h4>
-                                <p>Nuit a partir de <strong>128euros</strong></p>
-                                <p class="stars">
-                                    <i class="fa-solid fa-star blue"></i>
-                                    <i class="fa-solid fa-star blue"></i>
-                                    <i class="fa-solid fa-star blue"></i>
-                                    <i class="fa-solid fa-star blue"></i>
-                                    <i class="fa-solid fa-star grey"></i>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="bedroom-card popular-card">
-                            <img src="/Images/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Canebiere">
-                            <div class="popular-description">
-                                <h4>Hotel le soleil du matin</h4>
-                                <p>Nuit a partir de <strong>128euros</strong></p>
+                                <h4>Hotel Tout bleu et Blanc</h4>
+                                <p>Nuit à partir de <strong>68€</strong></p>
                                 <p class="stars">
                                     <i class="fa-solid fa-star blue"></i>
                                     <i class="fa-solid fa-star blue"></i>
@@ -216,50 +192,64 @@
                         </div>
                     </div>
                 </div>
-            
-            </div>
+            </section>
 
-            <h3>Activités a Marseille</h3>
-            <div class="activities-list">
-                <div class="big big1">
-                    <h4>Vieux port</h4>
-                </div>
-                <div class="medium1">
-                    <h4>Fort de Pomegues</h4>
-                </div>
-                <div class="small1">
-                    <h4>Iles du frioul</h4>
-                </div>
-                <div class="big big2">
-                    <h4>Calanques</h4>
-                </div>
-                <div class="small2">
-                    <h4>Notre dame de la garde</h4>
-                </div>
-                <div class="medium2">
-                    <h4>Parc Longchamp</h4>
-                </div>
-            </div>
+            <section class="activities">
+                <h2>Activités à Marseille</h2>
+                    <div class="activities-cards">
+                        <div class="card-1">
+                            <a class="activity-link" href=""><img class="vieuxport-img" src="/images/activites/vieux-port.jpg" alt="Vieux Port">
+                            <h4>Vieux Port</h4>
+                            </a>
+                        </div>
+                        <div class="card-2">
+                            <a class="activity-link" href=""><img class="fortpomegues-img" src="/images/activites/fort-de-pomegues.jpg" alt="Fort de Pomègues">
+                            <h4>Fort de Pomègues</h4>
+                            </a>
+                        </div>                         
+                        <div class="card-3">
+                            <a class="activity-link" href=""><img class="ilefrioul-img" src="/images/activites/iles-du-frioul.jpg" alt="Îles du Frioul">
+                            <h4>Îles du Frioul</h4>
+                            </a>
+                        </div>
+                        <div class="card-4">
+                            <a class="activity-link" href=""><img class="parccalanques-img" src="/images/activites/parc-nationnal-des-calanques.jpg" alt="Parc des Calanques">
+                            <h4>Parc des Calanques</h4>
+                            </a>
+                        </div>
+                        <div class="card-5">
+                            <a class="activity-link" href=""><img class="notredamegarde-img" src="/images/activites/notre-dame-de-la-garde.jpg" alt="Notre-Dame-de-la-Garde">
+                            <h4>Notre-Dame-de-la-Garde</h4>
+                            </a>
+                        </div>
+                        <div class="card-6">
+                            <a class="activity-link" href=""><img class="parclongchamp-img" src="/images/activites/parc-longchamp.jpg" alt="Parc Longchamp">
+                            <h4>Parc Longchamp</h4>
+                            </a>
+                        </div>
+                    </div>
+            </section>
         </main>
 
         <footer>
             <div>
-                <h5>A propos</h5>
-                <p>Fonctionnement du site</p>
-                <p>Conditions generales de vente</p>
-                <p>Donnees de confidentialites</p>
+              <h4>A propos</h4>
+              <p>Fonctionnement du site</p>
+              <p>Conditions générales de vente</p>
+              <p>Données et confidentialités</p>
             </div>
             <div>
-                <h5>Nos hebergements</h5>
-                <p>Charte qualite</p>
-                <p>Soumettre votre hotel</p>
+              <h4>Nos hébergements</h4>
+              <p>Charte qualité</p>
+              <p>Soumettre votre hotel</p>
             </div>
             <div>
-                <h5>Assistance</h5>
-                <p>Centre d'aide</p>
-                <p>Nous contacter</p>
+              <h4>Assistance</h4>
+              <p>Centre d'aide</p>
+              <p>Nous contacter</p>
             </div>
-        </footer>
+          </footer>
+
     </body>
 
 </html>
