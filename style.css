@@ -189,6 +189,12 @@ margin = marge exterieur qui separe les elements*/
     cursor: pointer;
 }
 
+@media (max-width: 768px) {
+    .filter-list h2 {
+        width: 100%;
+    }
+
+}
 
 /*SEARCH-RESULTS*/
 .search-results {
@@ -293,7 +299,6 @@ margin = marge exterieur qui separe les elements*/
     letter-spacing: -1px; /* espace entre les étoiles */
     margin: 4px 0 3px 7px;
 }
-
 
 /*POPULAR*/
 .bedrooms-list .popular-flex {
@@ -416,6 +421,12 @@ margin = marge exterieur qui separe les elements*/
     margin-top: 1.4rem;
 }
 
+@media (max-width: 768px) {
+    .bedrooms-list {
+       width: 100%;
+
+    }
+}
 
 /*ACTIVITIES*/
 .activities {
@@ -622,4 +633,10 @@ footer h4 {
 
 footer p {
     font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+    }
 }
