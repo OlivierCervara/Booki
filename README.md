@@ -1,5 +1,11 @@
 Projet Booki
 
-Vous avez trouvé votre premier stage en tant que développeur web chez Booki, une petite entreprise proposant un outil de planification de vacances ! Son site permet aux usagers de trouver des hébergements et des activités dans la ville de leur choix. Les hébergements peuvent également être filtrés par thématique, par exemple leur budget ou leur ambiance.
+Deuxième projet du parcours développeur web chez OpenClassrooms. L'objectif est d'intégrer la maquette d'un site de planification de vacance nommé "Booki" 
 
-Un nouveau design basé sur les principes du Material Design vient d’être réalisé par Loïc, designer UI.
+Elements fournis par l'entreprise virtuelle :
+
+  -La maquette pour les résolutions ordinateur et téléphone nous est donné.
+  -Toutes les images présentes sur le site sont aussi livrés en format sm, md, l & xl.
+  -Les icones proviennent de Font Awesome
+  -Les couleurs sont : bleu #0065FC - bleu clair #DEEBFF - gris #F2F2F2
+  -La police est "Raleway"
