@@ -1,0 +1,656 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap'); /* Les import se mettent toujours tout en haut du fichier css*/
+
+:root {
+    --bgcolor1:#F2F2F2;
+}
+
+* { /* * est le selecteur universel */
+    box-sizing: border-box; /*Box sizing border box signifie que peut importe toutes les modifs de padding margin etc la box de mon element gardera sa taille initiale*/
+    font-family: "Raleway", "sans-serif"; /*On ajoute la police sans serif si jamais l'utilisateur ne peut pas voir raleway*/
+}
+
+body {
+    margin: 0; /*Pour que la bordure top soit collee au top de la page*/
+}
+
+a {
+    color: inherit; /*On veut que la couleur de tous nos textes soit la meme que le parent grace a inherit et ca donnera donc du noir car par defaut c'est noir.*/
+    text-decoration: none; /*Pour enlever le sous lignage de base on met text-decoration: none.*/
+}
+
+
+/* NAVBAR*/
+nav {
+    display: flex; /*display flex permet de modifier la taille comme on veut sans avoir des problemes d'empilements d'elements sans aucune incidence sur la boite*/
+    align-items: center; /*align items center permet a ce que tous les elements soient a la meme hauteur*/
+    justify-content: flex-end; /*On veut les mettre en haut a droite donc on utilise justify content flex end*/
+    flex-wrap: wrap; /*flex wrap wrap permet l'empilement des boites quand les dimensions de la fenetre se reduisent*/
+}
+
+nav a {
+    padding: 2rem; /*Le padding correspond à l'espace entre le contenu de l'élément et sa bordure Pour empecher les elements de bouger pendant le hover on met une bordure transparente qui deviendra bleue*/
+    border-top: 3px solid transparent; /*On initialise une bordure du haut qui sera transparente mais bleue dans le hover*/
+}
+
+nav a:hover { /*Ici grace au :hover nous cherchons a faire en sorte que la bordure du haut soit colorier en bleue lorsque l'utilisateur pointe son curseur sur nos elements de nav.*/
+    border-top-color: #0065fc;
+}
+
+#logo { /*Pour specifier un id on doit mettre # suivi du nom de l'id*/
+    margin-top: 25px; /*La marge (margin) permet de créer un espace supplémentaire à l'extérieur de l'élément.*/
+    margin-left: 3.5rem;
+    margin-right: auto; /*On creer une marge a droite du logo et grace a "auto" on veut que cette marge prenne toute la place dispo a droite car sinon le logo sera en haut a droite a cause du flex end.*/
+    height: 55px;
+}
+
+.nav-bar { /*Pour specifier une class on doit mettre un . suivi du nom de la class*/
+    display: flex;
+}
+
+.nav-bar a:hover {
+    color: #0065fc;
+}
+
+@media (max-width: 768px) { /*lorsque la taille max de la page est de 768px.*/
+    .nav-bar {
+        order: 1;
+        flex-basis: 100%; /*Quand le texte descend je veux que ma div prenne toute la place dispo grace a flex basis 100%*/
+        text-align: center; /*Pour centrer le texte*/
+    }
+
+    .nav-bar a {
+        flex-basis: 50%; /*Grace au flex basis, dans ces dimensions notre navabr prendra 100% de sons espace et nos a prendront a chacun 50%*/
+        border-bottom: 3px solid #F2F2F2;
+    }
+
+    .nav-bar a:hover {
+        border-bottom-color: #0065fc; /*Il faut que dans ces dimensions apparaisse une sub nav grise qui devient bleue quand curseur sur un element.*/
+        border-top-color: transparent; /*On veut que sur ces dimensions la barre bleue du haut soit tranferer en bas. Nous allons donc rajoute une barre en bas et rendre invisible la barre du haut.*/
+    }
+
+    #logo { /*On veut que le logo soit centre lorsque avec ces dimensions donc je le met en block et je rempli les margin de droite et de gauche*/
+        display: block; /*Les balises en display block prennent toute la largeur disponible et s'affichent avec un saut de ligne avant et après*/
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/*padding = marge interieure
+margin = marge exterieur qui separe les elements*/
+
+/*BODY*/
+section {
+    display: flex;
+    flex-direction: column; /*permet de spécifier le type d'ordonnancement en colonne*/
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: auto 50px;
+}
+
+.wrapper.row {
+    flex-wrap: wrap; /*Pour que les éléments flex s'affichent sur plusieurs lignes avec un retour automatique.*/
+    flex-direction: row; /*L'axe principal du conteneur flexible suit la direction du texte. Les points main-start et main-end vont dans la même direction que le contenu.*/
+}
+
+.wrapper h1 {
+    font-size: 1.6rem;
+}
+
+.wrapper p {
+    margin-top: -8px;
+    margin-bottom: 1.5rem;
+}
+
+/*TEXT-BOX*/
+.text-box {
+    display: flex;
+    align-items: stretch; /*align item stretch Les éléments flexibles sont étirés afin que la taille de la boîte de marge sur l'axe en bloc est la même que celle de la ligne sur laquelle l'élément se trouve, tout en respectant les contraintes de hauteur et de largeur.*/
+    font-size: 1.2rem;
+}
+
+.text-box > * { /*> permet de cibler les descendants direct*/
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+}
+
+.text-box i { /*Ici on prend le selecteur pour tous les i a l'interieur du text-box*/
+    background-color: #F2F2F2;
+    border-radius: 1rem 0 0 1rem; /*Le bordeur radius sert a arrondir les angle respectivement haut gauche - haut droit - bas droit - bas gauche ici on veut les angles gauches arrondis*/              
+}
+
+.text-box input {
+    padding-right: 0.5rem;
+    border: 1px solid #F2F2F2;
+    overflow: auto; /*overflow sert a faire en sorte que l'input ne soit pas couper par sa boite*/
+}
+            
+.text-box input::placeholder {
+    font-size: 1.2rem;
+    color: black;
+    font-weight: bold;
+}
+
+.text-box button {
+    background-color: #0065FC;
+    color: white;
+    font-weight: bold;
+    border-radius: 0 1rem 1rem 0;
+    border: none;
+    cursor: pointer;
+}
+            
+.fa-sharp.fa-solid.fa-magnifying-glass {
+    display: none;
+}
+            
+@media (max-width: 768px) {
+    .text-box .search-text {
+        display: none;
+    }
+    
+    .fa-sharp.fa-solid.fa-magnifying-glass {
+        display: inline;
+        color: white;
+        background-color: inherit;
+    }
+
+}
+
+
+/*FILTERS*/
+.filter-list {
+    display: flex;
+    align-items: center;
+    gap: 1rem 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.filter-list h2 {
+    font-size: 1.2rem;
+}
+
+.filter i {
+    color: #0065FC;
+    background-color: #deebff;
+    border-radius: 50%;
+    margin: -2px;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center; /*Les éléments flexibles sont centrés sur l'axe en bloc au sein de la ligne. Si ces éléments sont plus grands que la ligne, ils dépasseront également de chaque côté.*/
+    justify-content: center; /*Les éléments sont regroupés au centre du conteneur selon l'axe principal.*/
+}
+
+.filter {
+    border: 2px solid #F2F2F2;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    transition: all 100ms;
+}
+
+.filter span {
+    font-weight: bold;
+    padding: 0 1rem;
+}
+
+.filter:hover {
+    background-color: #f3f8ff;
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .filter-list h2 {
+        width: 100%;
+    }
+
+}
+
+/*SEARCH-RESULTS*/
+.search-results {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-top: 2rem;
+}
+
+.search-results p {
+    margin-bottom: -11px;
+}
+
+.search-results i {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #0065FC;
+    width: 1.6rem;
+    height: 1.6rem;
+    border: 1px solid #F2F2F2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*BEDROOMS-LIST*/
+.bedrooms-list .city a {
+    font-weight: bold;
+}
+
+
+/*LIST BEDROOMS CITY*/
+.bedrooms-list h3 {
+    font-size: 22px;
+    margin: 20px 0 10px 20px;
+}
+
+.bedrooms-list a {
+    font-size: 16px;
+    margin-right: auto;
+    margin-left: 1.5rem;
+}
+
+.city {
+    background-color: var(--bgcolor1);
+    margin-top: 2rem;
+    margin-right: 2rem;
+    border-radius: 1rem;
+    width: 60%;
+    padding-bottom: 1em;
+}
+.popular {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bgcolor1);
+    margin-top: 2rem;
+    border-radius: 1rem;
+    width: 32%;
+    padding: 0 1em 1em 1em;
+}
+
+.popular h3 i {
+    margin-right: 0.5rem;
+    size: 1.5rem;
+}
+
+.city-bedrooms-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly; /*Les éléments sont espacés équitablement*/
+    padding-bottom: 1em;
+}
+
+.city-bedrooms-list .stars {
+    font-size: 15px; /* taille de la police des étoiles */
+    letter-spacing: -1px; /* espace entre les étoiles */
+    margin: 4px 0 3px 7px;
+}
+
+
+/*BEDROOMS-CARD*/
+.bedrooms-card {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    box-shadow: 0 0 16px #0000002e;
+    transition: all 0.2s;
+    min-width: 16em;
+    width: 30%;
+    max-width: 33%;
+}
+
+.bedrooms-card:hover {
+    transform: scale(1.02);
+    box-shadow: 3px 5px 11px -5px #000000;
+    cursor: pointer;
+}
+
+.bedrooms-card img {
+    border-radius: 1rem 1rem 0 0;
+    height: 10rem;
+    width: 100%;
+    object-fit: cover; /*Le contenu remplacé est dimensionné pour maintenir son ratio d'affichage tout en remplissant toute la boîte de contenu. La taille réelle est calculée pour couvrir la zone décrite par la hauteur et la largeur de l'élément.*/
+    object-position: center;
+}
+
+.blue {
+    color: #0065FC;
+}
+
+.grey {
+    color: #F2F2F2;
+}
+
+.city-bedrooms-list h4 {
+    margin: 3px 0 3px 7px; /* marges du h4 */
+    font-size: 18px;
+}
+
+.city-bedrooms-list p {
+    font-size: 16px; /* taille de la police du p */
+    margin: 3px 0 3px 7px;
+}
+
+
+/*POPULAR-CARD*/
+.popular-card.bedrooms-card {
+    margin-left: 0.5rem;
+}
+
+.popular-card.bedrooms-card p {
+    font-size: 16px;
+}
+
+.popular-card.bedrooms-card h4 {
+    font-size: 18px;
+}
+
+.popular-card.bedrooms-card .stars {
+    font-size: 15px; /* taille des étoiles */
+    letter-spacing: -1px; /* espace entre les étoiles */
+}
+
+.popular-card.bedrooms-card img {
+    height: auto;
+    border-radius: 1rem 0 0 1rem;
+    width: 40%;
+    margin-right: 0.5rem;
+    margin-right: 0.5rem;
+    object-fit: cover;
+}
+
+.popular-description {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: none;
+}
+
+.popular-card {
+    display: flex;
+    max-width: 100%;
+    height: 10rem;
+    width: auto;
+    min-width: 0;
+}
+
+.popular-flex {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.popular-card .stars {
+    margin-top: auto;
+    margin-bottom: 2rem;
+}
+
+.popular h3 {
+    display: flex;
+    justify-content: space-between; /*Les éléments ont espacés équitablement selon l'axe principal. L'espace utilisé entre chaque élément est le même. Le premier élément est aligné sur le bord du conteneur et le dernier élément est aussi aligné sur le bord de l'élément.*/
+}
+
+.popular h3,
+.city h3 {
+    margin-top: 1.4rem;
+}
+
+@media (max-width: 768px) {
+    .city {
+        width: 100%;
+        margin: 0 50px;
+        margin-top: 2rem;
+        background-color: transparent;
+    }
+    .bedrooms-card {
+        width: 100%;
+        max-width: 100%;
+        margin: .5em 0 ;
+    }
+    .popular {
+        padding: 1em 50px;
+        border-radius: 0;
+        width: 100%;
+        order:-1
+    }
+    .popular-card {
+        width: auto;
+    }
+    .wrapper.row {
+        margin: 0;
+    }
+}
+
+/*ACTIVITIES*/
+.activities {
+    width: 100%; /* largeur du bloc sur la page */
+    margin-top: 50px;
+    margin-bottom: 75px;
+}
+
+.activities .activities-cards {
+    width: 95%; /* largeur des cartes dans le bloc */
+    height: 485px; /* hauteur des cartesndans le bloc */
+    display: flex; /* pour aligner les cartes */
+    flex-direction: column; /* sens de l'alignement des cartes */
+    flex-wrap: wrap; /* pour faire un retour à la ligne quand la hauteur du bloc est atteinte */
+}
+
+.activities-cards > div:hover {
+    transition: all 0.2s;
+    transform: scale(1.02);
+    box-shadow: 3px 5px 11px -5px #000000;
+}
+
+.activities a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.activities h2{
+    margin: 30px 0 30px 20px; /* marges de Activités à Marseille */
+    font-size: 22px; /* taille de la police du h2 */
+}
+
+.activities h4 {
+    font-size: 16px; /* taille du texte des légendes */
+    font-weight: bold; /* poids du texte des légendes */
+    text-align: left; /* alignement du texte des légendes */
+    margin: 0; /* marge en haut des légendes */
+    padding: 1em;
+}
+
+.activities .activity-link {
+    color: #000000; /* pour changer la couleur du texte des liens au repos */
+    text-decoration: none; /* pour supprimer le soulignement du texte des liens au repos */
+}
+
+.activities .card-1 {
+    width: 22%; /* largeur de la carte 1 */
+    height: 100%; /* hauteur de la carte 1 */
+    border-color: #F2F2F2; /* couleur de la bordure de la carte 1 */
+    border-radius: 20px; /* arrondis des bordures de la carte 1 */
+    box-shadow: 0 0 16px #0000002e; /* ombre des bordures de la carte 1 */
+    margin-right: 30px; /* marge droite de la carte 1 */
+}
+
+.card-1 .vieuxport-img {
+    width: 100%; /* largeur de l'image de la carte 1 */
+    height: 90%; /* hauteur de l'image de la carte 1 */
+    object-fit: cover; /* pour que les photos conservent leurs proportions */
+    border-radius: 20px 20px 0 0; /* arrondis de la photo de l'élement 1 */
+}
+
+.activities .card-2 {
+    width: 22%;
+    height: 53%;
+    border-color: #F2F2F2;
+    border-radius: 20px;
+    box-shadow: 0 0 16px #0000002e;
+    margin-right: 20px;
+}
+
+.card-2 .fortpomegues-img {
+    width: 100%;
+    height: 81%;
+    object-fit: cover; 
+    border-radius: 20px 20px 0 0;
+}
+
+.activities .card-3 {
+    width: 22%;
+    height: 38.6%;
+    border-color: #F2F2F2;
+    border-radius: 20px;
+    box-shadow: 0 0 16px #0000002e;
+    margin: 40px 20px 0 0;
+}
+
+.card-3 .ilefrioul-img {
+    width: 100%;
+    height: 74%;
+    object-fit: cover; 
+    border-radius: 20px 20px 0 0;
+}
+
+.activities .card-4 {
+    width: 22%;
+    height: 100%;
+    border-color: #F2F2F2;
+    border-radius: 20px;
+    box-shadow: 0 0 16px #0000002e;
+    margin-right: 29px;
+    margin-left: 13px;
+}
+
+.card-4 .parccalanques-img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover; 
+    border-radius: 20px 20px 0 0;
+}
+
+.activities .card-5 {
+    width: 22%;
+    height: 45%;
+    border-color: #F2F2F2;
+    border-radius: 20px;
+    box-shadow: 0 0 16px #0000002e;
+}
+
+.card-5 .notredamegarde-img {
+    width: 100%;
+    height: 78%;
+    object-fit: cover; 
+    border-radius: 20px 20px 0 0;
+}
+
+.activities .card-6 {
+    width: 22%;
+    height: 45%;
+    border-color: #F2F2F2;
+    border-radius: 20px;
+    box-shadow: 0 0 16px #0000002e;
+    margin-top: 46px;
+}
+
+.card-6 .parclongchamp-img {
+    width: 100%;
+    height: 78%;
+    object-fit: cover; 
+    border-radius: 20px 20px 0 0;
+}
+
+@media (max-width: 768px) {
+    .activities .activities-cards {
+        display: block; /* pour annuler le flex */
+        width: 100%; /* largeur du bloc des cartes */
+        height: 100%; /* hauteur du bloc des cartes */
+    }
+
+    .activities h4 {
+        padding-bottom: 4%; /* padding bas du h4 */
+    }
+
+    .accommodation .popular-text {
+        margin: 3% 3% 1% 3%; /* marges du texte */
+    }
+
+    .activities .card-1, .activities .card-2, .activities .card-3, .activities .card-4, .activities .card-5, .activities .card-6 {
+        width: 90%; /* largeur des cartes */
+        height: 100%; /* hauteur des cartes */
+        margin: 1.5em auto; /* marges des cartes */
+    }
+
+    .card-1 .vieuxport-img {
+        width: 100%; /* largeur des photos */
+        height: 30vw; /* hauteur des photos */
+        padding-bottom: 2%; /* padding en haut des photos */
+    }
+    
+    .card-2 .fortpomegues-img {
+        width: 100%; /* largeur des photos */
+        height: 30vw; /* hauteur des photos */
+        padding-bottom: 2%; /* padding en haut des photos */
+    }
+    
+    .card-3 .ilefrioul-img {
+        width: 100%; /* largeur des photos */
+        height: 30vw; /* hauteur des photos */
+        padding-bottom: 2%; /* padding en haut des photos */
+    }
+
+    .card-4 .parccalanques-img {
+        width: 100%; /* largeur des photos */
+        height: 30vw; /* hauteur des photos */
+        padding-bottom: 2%; /* padding en haut des photos */
+    }
+
+    .card-5 .notredamegarde-img {
+        width: 100%; /* largeur des photos */
+        height: 30vw; /* hauteur des photos */
+        padding-bottom: 2%; /* padding en haut des photos */
+    }
+    
+    .card-6 .parclongchamp-img {
+        width: 100%; /* largeur des photos */
+        height: 30vw; /* hauteur des photos */
+        padding-bottom: 2%; /* padding en haut des photos */
+    }
+}
+
+
+/*FOOTER*/
+footer {
+    background-color: #F2F2F2;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-size: smaller;
+    padding: 1rem;
+}
+
+footer h4 {
+    font-size: 19px;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+    }
+}
