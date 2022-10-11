@@ -428,6 +428,9 @@ section {
     .wrapper.row {
         margin: 0;
     }
+    .popular-description {
+        max-height: 100%;
+    }
 }
 
 /*ACTIVITIES*/
