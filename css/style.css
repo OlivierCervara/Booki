@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap'); /* Les import se mettent toujours tout en haut du fichier css*/
 
-:root {
-    --bgcolor1:#F2F2F2;
-}
-
 * { /* * est le selecteur universel */
     box-sizing: border-box; /*Box sizing border box signifie que peut importe toutes les modifs de padding margin etc la box de mon element gardera sa taille initiale*/
     font-family: "Raleway", "sans-serif"; /*On ajoute la police sans serif si jamais l'utilisateur ne peut pas voir raleway*/
@@ -256,7 +252,7 @@ section {
 }
 
 .city {
-    background-color: var(--bgcolor1);
+    background-color: #F2F2F2;
     margin-top: 2rem;
     margin-right: 2rem;
     border-radius: 1rem;
@@ -266,7 +262,7 @@ section {
 .popular {
     display: flex;
     flex-direction: column;
-    background-color: var(--bgcolor1);
+    background-color: #F2F2F2;
     margin-top: 2rem;
     border-radius: 1rem;
     width: 32%;
