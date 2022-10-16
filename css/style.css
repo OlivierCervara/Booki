@@ -271,7 +271,6 @@ section {
 
 .popular h3 i {
     margin-right: 0.5rem;
-    size: 1.5rem;
 }
 
 .city-bedrooms-list {
@@ -368,7 +367,6 @@ section {
 .popular-description {
     display: flex;
     flex-direction: column;
-    margin: none;
 }
 
 .popular-card {
@@ -464,7 +462,7 @@ section {
     font-size: 22px; /* taille de la police du h2 */
 }
 
-.activities h4 {
+.activities h3 {
     font-size: 16px; /* taille du texte des légendes */
     font-weight: bold; /* poids du texte des légendes */
     text-align: left; /* alignement du texte des légendes */
