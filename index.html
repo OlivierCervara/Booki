@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--viewport : la valeur passée à content va nous permettre d’indiquer comment le navigateur doit afficher la page sur différents appareils-->
         <title>Booki</title>
         <script src="https://kit.fontawesome.com/e3f88593b6.js" crossorigin="anonymous"></script> <!--Pour utiliser les icons de font awesome il faut rajouter un script-->
-        <link rel="stylesheet" href="/css/style.css"> <!--on link le fichier css qui contiendra tout le css-->
+        <link rel="stylesheet" href="css/style.css"> <!--on link le fichier css qui contiendra tout le css-->
     </head>
 
     <body>
@@ -15,8 +15,8 @@
             <nav class="nav-bar"> <!--Quand on a plusieurs liens qui se mettent les uns a la suite de autres c'est une navbar-->
                 <img id="logo" src="images/logo/Booki@3x.png" alt="Logo Booki"> <!--l'attribut alt sert a decrire la photo pour les malvoyants--> <!--L'attribut id va nous permettre de specifier dans le css les infos qu'on veut appliquer seulement au logo-->      
                 <div class="nav-bar"> <!--On rajoute une div a l'interieur du nav car on veut que lorsque la fenetre change de taille nos elements soient lies-->
-                    <a href="">Hébergements</a> <!--a href="lien">desciption. les liens s'affichent les uns a la suite des autres car c'est en display line alors qu'une div est en display block-->
-                    <a href="">Activités</a>
+                    <a href="#hebergements">Hébergements</a> <!--a href="lien">desciption. les liens s'affichent les uns a la suite des autres car c'est en display line alors qu'une div est en display block-->
+                    <a href="#activites">Activités</a>
                 </div>
             </nav>
         </header>
@@ -72,7 +72,7 @@
             </section>
 
             <!--BEDROOMS-LIST-->
-            <section class="bedrooms-list">
+            <section id="hebergements" class="bedrooms-list">
                 <div class="wrapper row">
                     <div class="city">
                         <h3>Hébergements à Marseille</h3>
@@ -203,7 +203,7 @@
                     </div>
                 </div>
             </section>
-            <article class="activities">
+            <article id="activites" class="activities">
                 <div class="wrapper">
                     <h2>Activités à Marseille</h2>
                     <div class="activities-cards">
