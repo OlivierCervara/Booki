@@ -24,7 +24,7 @@ nav {
 }
 
 nav a {
-    padding: 2rem; /*Le padding correspond à l'espace entre le contenu de l'élément et sa bordure Pour empecher les elements de bouger pendant le hover on met une bordure transparente qui deviendra bleue*/
+    padding: 32px; /*Le padding correspond à l'espace entre le contenu de l'élément et sa bordure Pour empecher les elements de bouger pendant le hover on met une bordure transparente qui deviendra bleue*/
     border-top: 3px solid transparent; /*On initialise une bordure du haut qui sera transparente mais bleue dans le hover*/
 }
 
@@ -34,7 +34,7 @@ nav a:hover { /*Ici grace au :hover nous cherchons a faire en sorte que la bordu
 
 #logo { /*Pour specifier un id on doit mettre # suivi du nom de l'id*/
     margin-top: 25px; /*La marge (margin) permet de créer un espace supplémentaire à l'extérieur de l'élément.*/
-    margin-left: 3.5rem;
+    margin-left: 56px;
     margin-right: auto; /*On creer une marge a droite du logo et grace a "auto" on veut que cette marge prenne toute la place dispo a droite car sinon le logo sera en haut a droite a cause du flex end.*/
     height: 55px;
 }
@@ -47,7 +47,7 @@ nav a:hover { /*Ici grace au :hover nous cherchons a faire en sorte que la bordu
     color: #0065fc;
 }
 
-@media (max-width: 768px) { /*lorsque la taille max de la page est de 768px.*/
+@media (max-width: 912px) { /*lorsque la taille max de la page est de 768px.*/
     .nav-bar {
         order: 1;
         flex-basis: 100%; /*Quand le texte descend je veux que ma div prenne toute la place dispo grace a flex basis 100%*/
@@ -91,39 +91,39 @@ section {
 }
 
 .wrapper h1 {
-    font-size: 1.6rem;
+    font-size: 25.6px;
 }
 
 .wrapper p {
     margin-top: -8px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 24px;
 }
 
 /*TEXT-BOX*/
 .text-box {
     display: flex;
     align-items: stretch; /*align item stretch Les éléments flexibles sont étirés afin que la taille de la boîte de marge sur l'axe en bloc est la même que celle de la ligne sur laquelle l'élément se trouve, tout en respectant les contraintes de hauteur et de largeur.*/
-    font-size: 1.2rem;
+    font-size: 19.2px;
 }
 
 .text-box > * { /*> permet de cibler les descendants direct*/
-    padding: 1rem 1.5rem;
-    font-size: 1.2rem;
+    padding: 16px 24px;
+    font-size: 19.2px;
 }
 
 .text-box i { /*Ici on prend le selecteur pour tous les i a l'interieur du text-box*/
     background-color: #F2F2F2;
-    border-radius: 1rem 0 0 1rem; /*Le bordeur radius sert a arrondir les angle respectivement haut gauche - haut droit - bas droit - bas gauche ici on veut les angles gauches arrondis*/              
+    border-radius: 16px 0 0 16px; /*Le bordeur radius sert a arrondir les angle respectivement haut gauche - haut droit - bas droit - bas gauche ici on veut les angles gauches arrondis*/              
 }
 
 .text-box input {
-    padding-right: 0.5rem;
+    padding-right: 8px;
     border: 1px solid #F2F2F2;
     overflow: auto; /*overflow sert a faire en sorte que l'input ne soit pas couper par sa boite*/
 }
             
 .text-box input::placeholder {
-    font-size: 1.2rem;
+    font-size: 19.2px;
     color: black;
     font-weight: bold;
 }
@@ -132,7 +132,7 @@ section {
     background-color: #0065FC;
     color: white;
     font-weight: bold;
-    border-radius: 0 1rem 1rem 0;
+    border-radius: 0 16px 16px 0;
     border: none;
     cursor: pointer;
 }
@@ -141,7 +141,7 @@ section {
     display: none;
 }
             
-@media (max-width: 768px) {
+@media (max-width: 912px) {
     .text-box .search-text {
         display: none;
     }
@@ -159,14 +159,14 @@ section {
 .filter-list {
     display: flex;
     align-items: center;
-    gap: 1rem 1.5rem;
+    gap: 16px 24px;
     flex-wrap: wrap;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-top: 32px;
+    margin-bottom: 16px;
 }
 
 .filter-list h2 {
-    font-size: 1.2rem;
+    font-size: 19.2px;
 }
 
 .filter i {
@@ -174,8 +174,8 @@ section {
     background-color: #deebff;
     border-radius: 50%;
     margin: -2px;
-    width: 3rem;
-    height: 3rem;
+    width: 48px;
+    height: 48px;
     display: flex;
     align-items: center; /*Les éléments flexibles sont centrés sur l'axe en bloc au sein de la ligne. Si ces éléments sont plus grands que la ligne, ils dépasseront également de chaque côté.*/
     justify-content: center; /*Les éléments sont regroupés au centre du conteneur selon l'axe principal.*/
@@ -183,7 +183,7 @@ section {
 
 .filter {
     border: 2px solid #F2F2F2;
-    border-radius: 2rem;
+    border-radius: 32px;
     display: flex;
     align-items: center;
     transition: all 100ms;
@@ -191,7 +191,7 @@ section {
 
 .filter span {
     font-weight: bold;
-    padding: 0 1rem;
+    padding: 0 16px;
 }
 
 .filter:hover {
@@ -200,7 +200,7 @@ section {
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 912px) {
     .filter-list h2 {
         width: 100%;
     }
@@ -212,7 +212,7 @@ section {
     display: flex;
     align-items: center;
     gap: 11px;
-    margin-top: 2rem;
+    margin-top: 32px;
 }
 
 .search-results p {
@@ -220,11 +220,11 @@ section {
 }
 
 .search-results i {
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: bold;
     color: #0065FC;
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 25.6px;
+    height: 25.6px;
     border: 1px solid #F2F2F2;
     border-radius: 50%;
     display: flex;
@@ -248,29 +248,29 @@ section {
 .bedrooms-list a {
     font-size: 16px;
     margin-right: auto;
-    margin-left: 1.5rem;
+    margin-left: 24px;
 }
 
 .city {
     background-color: #F2F2F2;
-    margin-top: 2rem;
-    margin-right: 2rem;
-    border-radius: 1rem;
+    margin-top: 32px;
+    margin-right: 32px;
+    border-radius: 16px;
     width: 60%;
-    padding-bottom: 1em;
+    padding-bottom: 16px;
 }
 .popular {
     display: flex;
     flex-direction: column;
     background-color: #F2F2F2;
-    margin-top: 2rem;
-    border-radius: 1rem;
+    margin-top: 32px;
+    border-radius: 16px;
     width: 32%;
-    padding: 0 1em 1em 1em;
+    padding: 0 16px 16px 16px;
 }
 
 .popular h3 i {
-    margin-right: 0.5rem;
+    margin-right: 8px;
 }
 
 .city-bedrooms-list {
@@ -278,7 +278,7 @@ section {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly; /*Les éléments sont espacés équitablement*/
-    padding-bottom: 1em;
+    padding-bottom: 16px;
 }
 
 .city-bedrooms-list .stars {
@@ -291,12 +291,12 @@ section {
 /*BEDROOMS-CARD*/
 .bedrooms-card {
     background-color: white;
-    border-radius: 1rem;
-    padding: 0.5rem;
-    margin: 0.5rem;
+    border-radius: 16px;
+    padding: 8px;
+    margin: 8px;
     box-shadow: 0 0 16px #0000002e;
     transition: all 0.2s;
-    min-width: 16em;
+    min-width: 256px;
     width: 30%;
     max-width: 33%;
 }
@@ -308,8 +308,8 @@ section {
 }
 
 .bedrooms-card img {
-    border-radius: 1rem 1rem 0 0;
-    height: 10rem;
+    border-radius: 16px 16px 0 0;
+    height: 160px;
     width: 100%;
     object-fit: cover; /*Le contenu remplacé est dimensionné pour maintenir son ratio d'affichage tout en remplissant toute la boîte de contenu. La taille réelle est calculée pour couvrir la zone décrite par la hauteur et la largeur de l'élément.*/
     object-position: center;
@@ -336,7 +336,7 @@ section {
 
 /*POPULAR-CARD*/
 .popular-card.bedrooms-card {
-    margin-left: 0.5rem;
+    margin-left: 8px;
 }
 
 .popular-card.bedrooms-card p {
@@ -347,7 +347,7 @@ section {
 .popular-card.bedrooms-card h4 {
     font-size: 18px;
     margin-top: 0;
-    max-width: 9em;
+    max-width: 144px;
 }
 
 .popular-card.bedrooms-card .stars {
@@ -357,10 +357,10 @@ section {
 
 .popular-card.bedrooms-card img {
     height: auto;
-    border-radius: 1rem 0 0 1rem;
+    border-radius: 16px 0 0 16px;
     max-width: 40%;
-    margin-right: 0.5rem;
-    margin-right: 0.5rem;
+    margin-right: 8px;
+    margin-right: 8px;
     object-fit: cover;
 }
 
@@ -372,7 +372,7 @@ section {
 .popular-card {
     display: flex;
     max-width: 100%;
-    height: 11rem;
+    height: 176px;
     width: auto;
     min-width: 0;
 }
@@ -397,24 +397,24 @@ section {
 
 .popular h3,
 .city h3 {
-    margin-top: 1.4rem;
+    margin-top: 22.4px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 912px) {
     .city {
         width: 100%;
         padding: 0 50px;
-        margin-top: 2rem;
+        margin-top: 32px;
         background-color: transparent;
         margin-right: 0;
     }
     .bedrooms-card {
         width: 100%;
         max-width: 100%;
-        margin: .5em 0 ;
+        margin: 8px 0 ;
     }
     .popular {
-        padding: 1em 50px;
+        padding: 16px 50px;
         border-radius: 0;
         width: 100%;
         order:-1
@@ -467,7 +467,7 @@ section {
     font-weight: bold; /* poids du texte des légendes */
     text-align: left; /* alignement du texte des légendes */
     margin: 0; /* marge en haut des légendes */
-    padding: 1em;
+    padding: 16px;
 }
 
 .activities .activity-link {
@@ -571,7 +571,7 @@ section {
     border-radius: 20px 20px 0 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 912px) {
     .activities .activities-cards {
         display: block; /* pour annuler le flex */
         width: 100%; /* largeur du bloc des cartes */
@@ -589,7 +589,7 @@ section {
     .activities .card-1, .activities .card-2, .activities .card-3, .activities .card-4, .activities .card-5, .activities .card-6 {
         width: 90%; /* largeur des cartes */
         height: 100%; /* hauteur des cartes */
-        margin: 1.5em auto; /* marges des cartes */
+        margin: 24px auto; /* marges des cartes */
     }
 
     .card-1 .vieuxport-img {
@@ -638,7 +638,7 @@ footer {
     flex-wrap: wrap;
     justify-content: space-evenly;
     font-size: smaller;
-    padding: 1rem;
+    padding: 16px;
 }
 
 footer h4 {
@@ -649,7 +649,7 @@ footer p {
     font-size: 16px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 912px) {
     footer {
         flex-direction: column;
     }
